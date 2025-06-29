@@ -46,27 +46,28 @@ A scalable, fault-tolerant distributed job scheduling system built with **Node.j
 ---
 
 ## 📁 Project Structure
-
+<pre>
 backend/
-├── controllers/ # Express route logic
-│ └── jobsController.js
-├── routes/ # API route definitions
-│ └── jobs.js
-├── lib/ # Redis & Supabase clients
-│ ├── redis.js
-│ └── supabase.js
-├── worker/ # Background job processor
-│ ├── worker.js
-│ └── handlers/
-│ ├── email.js
-│ ├── imageResize.js
-│ ├── pdf.js
-│ └── index.js
-├── scripts/ # CLI tools for syncing jobs
-│ └── syncJobsToRedis.js
-├── index.js # Express server entry point
-├── .env # Env variables (ignored by git)
+├── controllers/         # Express route logic
+│   └── jobsController.js
+├── routes/              # API route definitions
+│   └── jobs.js
+├── lib/                 # Redis & Supabase clients
+│   ├── redis.js
+│   └── supabase.js
+├── worker/              # Background job processor
+│   ├── worker.js
+│   └── handlers/
+│       ├── email.js
+│       ├── imageResize.js
+│       ├── pdf.js
+│       └── index.js
+├── scripts/             # CLI tools for syncing jobs
+│   └── syncJobsToRedis.js
+├── index.js             # Express server entry point
+├── .env                 # Env variables (ignored by git)
 └── README.md
+</pre>
 
 ---
 
