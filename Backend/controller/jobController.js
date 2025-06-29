@@ -1,4 +1,5 @@
 const supabase = require("../lib/supabase");
+const redis = require('../lib/redis');
 const { v4: uuidv4 } = require("uuid");
 
 // Create job - POST Request
@@ -26,6 +27,12 @@ async function createJob(req, res) {
   if (error){
     return res.status(500).json({ error: error.message });
   }
+  // Enqueue to Redis
+  await redis.zAdd('jobs:queue', [{
+    score: new Date(scheduled_at || Date.now()).getTime(),
+    value: id
+  }]);
+
   res.status(201).json({
     data: data[0],
     message: "Job Added Successfully!"
