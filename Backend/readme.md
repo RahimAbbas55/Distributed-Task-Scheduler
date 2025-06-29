@@ -140,15 +140,25 @@ Each handler receives job.payload.
 ## 🧪 Getting Started
 
 1. Clone the repo & install dependencies
+   
       cd backend
+   
       npm install
-2. Add .env file
+   
+3. Add .env file
+   
       SUPABASE_URL=https://your-project.supabase.co
+   
       SUPABASE_KEY=your-supabase-service-role-key
+   
       REDIS_URL=redis://localhost:6379
+   
 3. Start API server
+   
       nodemon index.js
+   
 4.Run the background worker
+
       node worker/worker.js
 
 ---
