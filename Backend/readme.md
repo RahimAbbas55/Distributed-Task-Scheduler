@@ -95,7 +95,7 @@ Create a new job.
 
 Fetch all jobs from the database, sorted by latest created.
 
-### PUT /jobs/:id/cancel
+### `PUT /jobs/:id/cancel`
 
 Cancel a job only if it's still pending.
 
