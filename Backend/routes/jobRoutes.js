@@ -1,12 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const { createJob, getJobByID, cancelJobByID } = require("../controller/jobController");
+const { createJob, getJobByID, cancelJobByID, getAllJobs } = require("../controller/jobController");
 
 // Health check route
 router.get('/', (req, res) => {
   console.log('job api working');
   res.status(200).send('Job API working');
 });
+
+//Get all jobs
+router.get("/getJob", getAllJobs);
 
 // Get job by id
 router.get("/getJob/:id", getJobByID);
