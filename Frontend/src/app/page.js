@@ -15,12 +15,7 @@ import {
   FileText,
 } from "lucide-react";
 import JobTable from "./components/JobTable";
-import { getJobs } from "./lib/api";
-
-const createJob = async (jobData) => {
-  await new Promise((resolve) => setTimeout(resolve, 500));
-  return { success: true, id: Date.now() };
-};
+import { getJobs , addJob , cancelJob} from "./lib/api";
 
 export default function HomePage() {
   const [jobs, setJobs] = useState([]);
@@ -105,7 +100,7 @@ export default function HomePage() {
     try {
       JSON.parse(formData.payload);
 
-      await createJob(formData);
+      await addJob(formData);
 
       // Reset form and close modal
       setFormData({
