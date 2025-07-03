@@ -118,6 +118,12 @@ CREATE TABLE jobs (
 - Add job modal with validation
 - Live update after job creation or cancellation
 
+## Images
+
+<img width="1440" alt="Screenshot 2025-07-03 at 2 38 17 PM" src="https://github.com/user-attachments/assets/7b2fc45f-069b-4b6d-8412-32971b704211" />
+
+<img width="1440" alt="Screenshot 2025-07-03 at 2 38 28 PM" src="https://github.com/user-attachments/assets/1a8491a2-8910-4a79-b055-c15707713dc2" />
+
 ---
 
 ## 🔐 Environment Variables
